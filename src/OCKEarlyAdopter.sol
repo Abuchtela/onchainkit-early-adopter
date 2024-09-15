@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.27;
 
-import {ERC721} from "solmate/tokens/ERC721.sol";
+import {ERC721} from "openzeppelin-contracts/token/ERC721/ERC721.sol";
 
 contract OCKEarlyAdopter is ERC721 {
     constructor() ERC721("OnchainKit Early Adopter", "OCK") {}

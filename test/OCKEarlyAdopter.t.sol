@@ -11,7 +11,7 @@ contract OCKEarlyAdopterTest is Test {
         ock = new OCKEarlyAdopter();
     }
 
-    function test_OCKEarlyAdopter() public {
+    function test_OCKEarlyAdopter() public view {
         assertEq(ock.name(), "OnchainKit Early Adopter");
         assertEq(ock.symbol(), "OCK");
     }
