@@ -5,6 +5,8 @@ import {Script, console} from "forge-std/Script.sol";
 import {OCKEarlyAdopter} from "../src/OCKEarlyAdopter.sol";
 
 contract OCKEarlyAdopterScript is Script {
+    /////////
+
     OCKEarlyAdopter public ock;
 
     function setUp() public {}
