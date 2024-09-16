@@ -20,9 +20,18 @@ import {LibBase64} from "./LibBase64.sol";
 contract OCKEarlyAdopter is ERC721 {
     /////////
 
+    ///////// Private State
+
+    uint256 private _tokenIdCounter;
+
+    ///////// Construction
+
     constructor() ERC721("OnchainKit Early Adopter", "OCK") {}
 
-    function tokenURI(uint256 /*id*/) public pure override returns (string memory json) {
+    ///////// Views
+
+    /// @inheritdoc ERC721
+    function tokenURI(uint256 /*id*/ ) public pure override returns (string memory json) {
         json = string(
             abi.encodePacked(
                 "data:application/json;base64,",
@@ -37,5 +46,15 @@ contract OCKEarlyAdopter is ERC721 {
                 )
             )
         );
+    }
+
+    ///////// Actions
+
+    /// @notice Mint a token to an address (permissionlessly)
+    /// @param to The address to mint to
+    function mint(address to) public {
+        uint256 tokenId = _tokenIdCounter;
+        _tokenIdCounter++;
+        _safeMint(to, tokenId);
     }
 }

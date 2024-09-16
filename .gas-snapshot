@@ -1,1 +1,4 @@
-OCKEarlyAdopterTest:test_OCKEarlyAdopter() (gas: 47551)
+OCKEarlyAdopterTest:test_metadata() (gas: 17774)
+OCKEarlyAdopterTest:test_mint() (gas: 82916)
+OCKEarlyAdopterTest:test_mint_many() (gas: 192452)
+OCKEarlyAdopterTest:test_tokenURI() (gas: 37032)
